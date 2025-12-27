@@ -1,1 +1,89 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arpel Moda Srl | Pelletteria di Lusso</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oro: #c5a059;
+            --nero: #1a1a1a;
+            --bianco: #ffffff;
+            --grigio-chiaro: #f4f4f4;
+        }
 
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            color: var(--nero);
+            background-color: var(--bianco);
+        }
+
+        h1, h2, h3 {
+            font-family: 'Playfair Display', serif;
+            letter-spacing: 1px;
+        }
+
+        /* Navigazione */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--bianco);
+            border-bottom: 1px solid var(--grigio-chiaro);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--nero);
+            text-decoration: none;
+            text-transform: uppercase;
+        }
+
+        .nav-links {
+            list-style: none;
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            text-decoration: none;
+            color: var(--nero);
+            font-size: 14px;
+            font-weight: 400;
+            text-transform: uppercase;
+            transition: color 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: var(--oro);
+        }
+
+        /* Sezione Hero (Vetrina principale) */
+        .hero {
+            height: 80vh;
+            background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
+                        url('https://images.unsplash.com/photo-1548036328-c9fa89d128fa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1350&q=80'); /* Immagine temporanea di una borsa */
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: var(--bianco);
+            text-align: center;
+        }
+
+        .hero h2 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+        }
+
+        .hero p {
