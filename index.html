@@ -29,12 +29,12 @@
 
         h1, h2, h3 { font-family: 'Playfair Display', serif; letter-spacing: 1px; }
 
-        /* Navigazione con Logo Immagine */
+        /* Navigazione con LOGO CENTRALE GRANDE */
         nav {
             display: flex;
-            justify-content: space-between;
+            flex-direction: column; /* Dispone logo e link su due righe per dare spazio al logo */
             align-items: center;
-            padding: 15px 5%;
+            padding: 20px 5%;
             background: var(--bianco);
             position: sticky;
             top: 0;
@@ -42,12 +42,20 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
-        .logo-img {
-            height: 60px; /* Regola l'altezza del logo come preferisci */
+        .logo-main {
+            height: 150px; /* Logo bello grande come richiesto */
             width: auto;
+            margin-bottom: 15px;
         }
 
-        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; }
+        .nav-links { 
+            list-style: none; 
+            display: flex; 
+            gap: 30px; 
+            margin: 0; 
+            padding: 0;
+        }
+        
         .nav-links a {
             text-decoration: none;
             color: var(--nero);
@@ -55,6 +63,7 @@
             font-weight: 600;
             text-transform: uppercase;
             transition: color 0.3s;
+            letter-spacing: 1px;
         }
         .nav-links a:hover { color: var(--oro); }
 
@@ -62,7 +71,7 @@
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('vetrina.jpg'); /* Carica il tuo file vetrina.jpg */
+                        url('vetrina.jpg'); /* Assicurati che il file si chiami esattamente così */
             background-size: cover;
             background-position: center;
             display: flex;
@@ -128,14 +137,14 @@
             line-height: 1.8;
         }
 
-        .footer-logo-img { height: 50px; width: auto; margin-bottom: 20px; filter: brightness(0) invert(1); opacity: 0.8; }
         .footer-info { font-size: 14px; margin-bottom: 20px; font-weight: 300; }
         .footer-info a { color: var(--bianco); text-decoration: none; }
         .footer-info a:hover { color: var(--oro); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; }
+            .nav-links { gap: 15px; }
+            .logo-main { height: 100px; }
         }
     </style>
 </head>
@@ -143,8 +152,9 @@
 
     <nav>
         <a href="index.html">
-            <img src="logo_arpel.jpg" alt="Arpel Moda Logo" class="logo-img">
+            <img src="logo.jpg" alt="Arpel Moda Logo" class="logo-main">
         </a>
+        
         <ul class="nav-links">
             <li><a href="donna.html">Donna</a></li>
             <li><a href="uomo.html">Uomo</a></li>
@@ -193,7 +203,6 @@
     </section>
 
     <footer>
-        <img src="logo_arpel.jpg" alt="Arpel Moda Logo" class="footer-logo-img">
         <div class="footer-info">
             <p>Via Fratelli Testa n. 66 - 94014 Nicosia (EN)</p>
             <p>Telefono: <a href="tel:0935631451">0935 63 14 51</a> | Cellulare: <a href="tel:3474907333">347 49 07 333</a></p>
