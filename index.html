@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Arpel Moda Srl | L'Essenza della Pelletteria</title>
+    <title>Arpel Moda Srl | Pelletteria di Fabiana Giacobbe</title>
     
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
     
@@ -27,7 +27,9 @@
             line-height: 1.6;
         }
 
-        /* Navigazione Elegante */
+        h1, h2, h3 { font-family: 'Playfair Display', serif; letter-spacing: 1px; }
+
+        /* Navigazione */
         nav {
             display: flex;
             justify-content: space-between;
@@ -49,13 +51,7 @@
             letter-spacing: 2px;
         }
 
-        .nav-links {
-            list-style: none;
-            display: flex;
-            gap: 30px;
-            margin: 0;
-        }
-
+        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; }
         .nav-links a {
             text-decoration: none;
             color: var(--nero);
@@ -63,16 +59,14 @@
             font-weight: 600;
             text-transform: uppercase;
             transition: color 0.3s;
-            letter-spacing: 1px;
         }
-
         .nav-links a:hover { color: var(--oro); }
 
-        /* Hero Section - La Vetrina d'Impatto */
+        /* Hero Section */
         .hero {
-            height: 90vh;
+            height: 80vh;
             background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.2)), 
-                        url('https://images.unsplash.com/photo-1473187983305-f615310e7daa?ixlib=rb-4.0.3&auto=format&fit=crop&w=1470&q=80');
+                        url('https://images.unsplash.com/photo-1473187983305-f615310e7daa?auto=format&fit=crop&w=1470&q=80');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -84,20 +78,8 @@
             padding: 0 20px;
         }
 
-        .hero h1 {
-            font-family: 'Playfair Display', serif;
-            font-size: 4rem;
-            margin-bottom: 10px;
-            font-style: italic;
-        }
-
-        .hero p {
-            font-size: 1.2rem;
-            max-width: 700px;
-            margin-bottom: 35px;
-            font-weight: 300;
-            letter-spacing: 1px;
-        }
+        .hero h1 { font-size: 4rem; margin-bottom: 10px; }
+        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 35px; font-weight: 300; }
 
         .btn-gold {
             padding: 18px 45px;
@@ -106,38 +88,11 @@
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
-            letter-spacing: 2px;
             transition: all 0.4s;
             border: 1px solid var(--oro);
         }
 
-        .btn-gold:hover {
-            background: transparent;
-            border-color: var(--bianco);
-        }
-
-        /* Sezione Citazione (L'Essere) */
-        .manifesto {
-            padding: 100px 10%;
-            text-align: center;
-            background-color: var(--crema);
-        }
-
-        .manifesto h2 {
-            font-family: 'Playfair Display', serif;
-            font-size: 2.5rem;
-            color: var(--oro);
-        }
-
-        .manifesto p {
-            font-size: 1.1rem;
-            font-style: italic;
-            color: var(--grigio);
-            max-width: 800px;
-            margin: 0 auto;
-        }
-
-        /* Griglia Prodotti Interattiva */
+        /* Griglia Prodotti */
         .grid-container {
             padding: 80px 5%;
             display: grid;
@@ -152,16 +107,8 @@
             cursor: pointer;
         }
 
-        .card img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-            transition: transform 0.8s ease;
-        }
-
-        .card:hover img {
-            transform: scale(1.1);
-        }
+        .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
+        .card:hover img { transform: scale(1.1); }
 
         .card-overlay {
             position: absolute;
@@ -171,48 +118,28 @@
             flex-direction: column;
             justify-content: flex-end;
             padding: 40px;
-            transition: background 0.4s;
         }
 
-        .card:hover .card-overlay {
-            background: rgba(0,0,0,0.4);
-        }
+        .card-content h3 { color: var(--bianco); font-size: 2rem; margin: 0; }
+        .card-content span { color: var(--oro); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
 
-        .card-content h3 {
-            color: var(--bianco);
-            font-size: 2rem;
-            margin: 0;
-            text-transform: uppercase;
-        }
-
-        .card-content span {
-            color: var(--oro);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 2px;
-        }
-
-        /* Footer */
+        /* Footer con dati aggiornati */
         footer {
             padding: 60px 5%;
             background: var(--nero);
             color: var(--bianco);
             text-align: center;
+            line-height: 1.8;
         }
 
-        .footer-logo {
-            font-family: 'Playfair Display', serif;
-            font-size: 30px;
-            margin-bottom: 20px;
-            display: block;
-        }
-
-        .social-links { margin: 20px 0; }
-        .social-links a { color: var(--oro); margin: 0 15px; text-decoration: none; }
+        .footer-logo { font-family: 'Playfair Display', serif; font-size: 30px; margin-bottom: 20px; display: block; color: var(--oro); }
+        .footer-info { font-size: 14px; margin-bottom: 20px; font-weight: 300; }
+        .footer-info a { color: var(--bianco); text-decoration: none; }
+        .footer-info a:hover { color: var(--oro); }
 
         @media (max-width: 768px) {
             .hero h1 { font-size: 2.5rem; }
-            .nav-links { display: none; } /* Per semplicità mobile in questa bozza */
+            .nav-links { display: none; }
         }
     </style>
 </head>
@@ -224,25 +151,20 @@
             <li><a href="donna.html">Donna</a></li>
             <li><a href="uomo.html">Uomo</a></li>
             <li><a href="categorie.html">Collezioni</a></li>
-            <li><a href="about.html">Fabiana Giacobbe</a></li>
+            <li><a href="about.html">Chi Siamo</a></li>
             <li><a href="contatti.html">Contatti</a></li>
         </ul>
     </nav>
 
     <header class="hero">
         <h1>Arpel Moda</h1>
-        <p>L'eccellenza della pelletteria artigianale italiana. Borse, zaini e accessori creati per durare nel tempo e nell'anima.</p>
-        <a href="categorie.html" class="btn-gold">Scopri la Collezione</a>
+        <p>Pelletteria di alta qualità a Nicosia. Borse, zaini e accessori selezionati con cura per uno stile senza tempo.</p>
+        <a href="categorie.html" class="btn-gold">Esplora la Collezione</a>
     </header>
-
-    <section class="manifesto">
-        <h2>Passione Artigiana</h2>
-        <p>"Ogni creazione è un viaggio che parte dalla materia e arriva alla coscienza di chi la indossa. La pelle si trasforma in emozione."</p>
-    </section>
 
     <section class="grid-container">
         <div class="card" onclick="location.href='donna.html'">
-            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Borse Donna">
+            <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80" alt="Borse Donna">
             <div class="card-overlay">
                 <div class="card-content">
                     <span>Eleganza</span>
@@ -252,7 +174,7 @@
         </div>
 
         <div class="card" onclick="location.href='uomo.html'">
-            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Zaini Uomo">
+            <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Zaini Uomo">
             <div class="card-overlay">
                 <div class="card-content">
                     <span>Stile e Business</span>
@@ -262,7 +184,7 @@
         </div>
 
         <div class="card" onclick="location.href='categorie.html'">
-            <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Accessori">
+            <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=800&q=80" alt="Accessori">
             <div class="card-overlay">
                 <div class="card-content">
                     <span>Dettagli</span>
@@ -274,12 +196,12 @@
 
     <footer>
         <span class="footer-logo">Arpel Moda Srl</span>
-        <p>Via delle Rose, Fabriano (AN) | Tel: +39 000 000000</p>
-        <div class="social-links">
-            <a href="#">Instagram</a>
-            <a href="#">Facebook</a>
+        <div class="footer-info">
+            <p>Via Fratelli Testa n. 66 - 94014 Nicosia (EN)</p>
+            <p>Telefono: <a href="tel:0935631451">0935 63 14 51</a> | Cellulare: <a href="tel:3474907333">347 49 07 333</a></p>
+            <p>Email: <a href="mailto:fabianagiacobbe79@gmail.com">fabianagiacobbe79@gmail.com</a></p>
         </div>
-        <p style="font-size: 11px; opacity: 0.5;">&copy; 2025 Arpel Moda di Fabiana Giacobbe. Tutti i diritti riservati.</p>
+        <p style="font-size: 11px; opacity: 0.5; margin-top: 30px;">&copy; 2025 Arpel Moda Srl di Fabiana Giacobbe. Tutti i diritti riservati.</p>
     </footer>
 
 </body>
