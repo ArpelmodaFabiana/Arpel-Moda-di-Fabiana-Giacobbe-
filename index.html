@@ -9,7 +9,7 @@
     
     <style>
         :root {
-            --oro: #b89550;
+            --bordeaux: #800020; /* Colore Bordeaux vivace */
             --nero: #121212;
             --bianco: #ffffff;
             --crema: #faf9f6;
@@ -29,10 +29,10 @@
 
         h1, h2, h3 { font-family: 'Playfair Display', serif; letter-spacing: 1px; }
 
-        /* Navigazione con LOGO CENTRALE GRANDE */
+        /* Navigazione */
         nav {
             display: flex;
-            flex-direction: column; /* Dispone logo e link su due righe per dare spazio al logo */
+            flex-direction: column;
             align-items: center;
             padding: 20px 5%;
             background: var(--bianco);
@@ -42,16 +42,19 @@
             box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
 
+        /* Gestione Logo centrato e riduzione impatto sfondo bianco */
         .logo-main {
-            height: 150px; /* Logo bello grande come richiesto */
+            height: 140px;
             width: auto;
             margin-bottom: 15px;
+            mix-blend-mode: multiply; /* Aiuta a fondere lo sfondo bianco del jpg con la pagina */
+            display: block;
         }
 
         .nav-links { 
             list-style: none; 
             display: flex; 
-            gap: 30px; 
+            gap: 40px; 
             margin: 0; 
             padding: 0;
         }
@@ -59,19 +62,19 @@
         .nav-links a {
             text-decoration: none;
             color: var(--nero);
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
             text-transform: uppercase;
             transition: color 0.3s;
             letter-spacing: 1px;
         }
-        .nav-links a:hover { color: var(--oro); }
+        .nav-links a:hover { color: var(--bordeaux); }
 
         /* Hero Section con SFONDO VETRINA.JPG */
         .hero {
             height: 80vh;
             background: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), 
-                        url('vetrina.jpg'); /* Assicurati che il file si chiami esattamente così */
+                        url('vetrina.jpg');
             background-size: cover;
             background-position: center;
             display: flex;
@@ -83,37 +86,54 @@
             padding: 0 20px;
         }
 
-        .hero h1 { font-size: 4rem; margin-bottom: 10px; text-shadow: 2px 2px 4px rgba(0,0,0,0.5); }
-        .hero p { font-size: 1.2rem; max-width: 700px; margin-bottom: 35px; font-weight: 300; text-shadow: 1px 1px 3px rgba(0,0,0,0.5); }
+        .hero h1 { 
+            font-size: 4.5rem; 
+            margin-bottom: 10px; 
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5); 
+            color: var(--bianco);
+        }
+        
+        .hero p { 
+            font-size: 1.3rem; 
+            max-width: 700px; 
+            margin-bottom: 35px; 
+            text-shadow: 1px 1px 3px rgba(0,0,0,0.5); 
+        }
 
-        .btn-gold {
+        .btn-bordeaux {
             padding: 18px 45px;
-            background: var(--oro);
+            background: var(--bordeaux);
             color: var(--bianco);
             text-decoration: none;
             text-transform: uppercase;
             font-weight: 600;
             transition: all 0.4s;
-            border: 1px solid var(--oro);
+            border: 2px solid var(--bordeaux);
         }
 
-        /* Griglia Prodotti */
+        .btn-bordeaux:hover {
+            background: transparent;
+            color: var(--bianco);
+            border-color: var(--bianco);
+        }
+
+        /* Griglia Prodotti (Solo Donna e Uomo) */
         .grid-container {
-            padding: 80px 5%;
+            padding: 80px 10%;
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 30px;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 40px;
         }
 
         .card {
             position: relative;
             overflow: hidden;
-            height: 500px;
+            height: 600px;
             cursor: pointer;
         }
 
         .card img { width: 100%; height: 100%; object-fit: cover; transition: 0.8s; }
-        .card:hover img { transform: scale(1.1); }
+        .card:hover img { transform: scale(1.05); }
 
         .card-overlay {
             position: absolute;
@@ -122,11 +142,11 @@
             display: flex;
             flex-direction: column;
             justify-content: flex-end;
-            padding: 40px;
+            padding: 50px;
         }
 
-        .card-content h3 { color: var(--bianco); font-size: 2rem; margin: 0; }
-        .card-content span { color: var(--oro); font-weight: 600; text-transform: uppercase; letter-spacing: 2px; }
+        .card-content h3 { color: var(--bianco); font-size: 2.5rem; margin: 0; text-transform: uppercase; }
+        .card-content span { color: var(--bordeaux); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; background: rgba(255,255,255,0.9); padding: 5px 15px; }
 
         /* Footer */
         footer {
@@ -134,16 +154,14 @@
             background: var(--nero);
             color: var(--bianco);
             text-align: center;
-            line-height: 1.8;
+            border-top: 4px solid var(--bordeaux);
         }
 
-        .footer-info { font-size: 14px; margin-bottom: 20px; font-weight: 300; }
-        .footer-info a { color: var(--bianco); text-decoration: none; }
-        .footer-info a:hover { color: var(--oro); }
+        .footer-info a { color: var(--bordeaux); text-decoration: none; font-weight: 600; }
 
         @media (max-width: 768px) {
-            .hero h1 { font-size: 2.5rem; }
-            .nav-links { gap: 15px; }
+            .hero h1 { font-size: 2.8rem; }
+            .grid-container { grid-template-columns: 1fr; }
             .logo-main { height: 100px; }
         }
     </style>
@@ -158,7 +176,6 @@
         <ul class="nav-links">
             <li><a href="donna.html">Donna</a></li>
             <li><a href="uomo.html">Uomo</a></li>
-            <li><a href="categorie.html">Collezioni</a></li>
             <li><a href="about.html">Chi Siamo</a></li>
             <li><a href="contatti.html">Contatti</a></li>
         </ul>
@@ -166,8 +183,11 @@
 
     <header class="hero">
         <h1>Arpel Moda</h1>
-        <p>Pelletteria di alta qualità a Nicosia. Borse, zaini e accessori selezionati con cura per uno stile senza tempo.</p>
-        <a href="categorie.html" class="btn-gold">Esplora la Collezione</a>
+        <p>Pelletteria di alta qualità a Nicosia. Borse, zaini e accessori selezionati per uno stile senza tempo.</p>
+        <div style="display: flex; gap: 20px;">
+            <a href="donna.html" class="btn-bordeaux">Collezione Donna</a>
+            <a href="uomo.html" class="btn-bordeaux" style="background-color: transparent; border-color: var(--bianco);">Collezione Uomo</a>
+        </div>
     </header>
 
     <section class="grid-container">
@@ -175,7 +195,7 @@
             <img src="https://images.unsplash.com/photo-1590874103328-eac38a683ce7?auto=format&fit=crop&w=800&q=80" alt="Borse Donna">
             <div class="card-overlay">
                 <div class="card-content">
-                    <span>Eleganza</span>
+                    <span>Nuovi Arrivi</span>
                     <h3>Donna</h3>
                 </div>
             </div>
@@ -185,18 +205,8 @@
             <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Zaini Uomo">
             <div class="card-overlay">
                 <div class="card-content">
-                    <span>Stile e Business</span>
+                    <span>Business & Travel</span>
                     <h3>Uomo</h3>
-                </div>
-            </div>
-        </div>
-
-        <div class="card" onclick="location.href='categorie.html'">
-            <img src="https://images.unsplash.com/photo-1520903920243-00d872a2d1c9?auto=format&fit=crop&w=800&q=80" alt="Accessori">
-            <div class="card-overlay">
-                <div class="card-content">
-                    <span>Dettagli</span>
-                    <h3>Accessori</h3>
                 </div>
             </div>
         </div>
@@ -204,11 +214,11 @@
 
     <footer>
         <div class="footer-info">
+            <p><strong>Arpel Moda Srl di Fabiana Giacobbe</strong></p>
             <p>Via Fratelli Testa n. 66 - 94014 Nicosia (EN)</p>
-            <p>Telefono: <a href="tel:0935631451">0935 63 14 51</a> | Cellulare: <a href="tel:3474907333">347 49 07 333</a></p>
-            <p>Email: <a href="mailto:fabianagiacobbe79@gmail.com">fabianagiacobbe79@gmail.com</a></p>
+            <p>Telefono: <a href="tel:0935631451">0935 63 14 51</a> | Email: <a href="mailto:fabianagiacobbe79@gmail.com">fabianagiacobbe79@gmail.com</a></p>
         </div>
-        <p style="font-size: 11px; opacity: 0.5; margin-top: 30px;">&copy; 2025 Arpel Moda Srl di Fabiana Giacobbe. Tutti i diritti riservati.</p>
+        <p style="font-size: 11px; opacity: 0.5; margin-top: 30px;">&copy; 2025 Arpel Moda Srl. Tutti i diritti riservati.</p>
     </footer>
 
 </body>
