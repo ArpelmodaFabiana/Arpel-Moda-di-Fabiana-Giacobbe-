@@ -1,1 +1,163 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chi Siamo | Arpel Moda Srl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oro: #b89550;
+            --nero: #121212;
+            --bianco: #ffffff;
+            --crema: #faf9f6;
+            --grigio: #757575;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bianco);
+            color: var(--nero);
+            line-height: 1.8;
+        }
+
+        h1, h2 { font-family: 'Playfair Display', serif; }
+
+        /* Navigazione (coerente con index) */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--bianco);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-main { height: 80px; width: auto; margin-bottom: 15px; }
+
+        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--nero);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* Sezione Storia */
+        .story-container {
+            max-width: 900px;
+            margin: 60px auto;
+            padding: 0 20px;
+            text-align: center;
+        }
+
+        .story-header h1 {
+            font-size: 3rem;
+            color: var(--nero);
+            margin-bottom: 10px;
+        }
+
+        .story-header .subtitle {
+            font-style: italic;
+            color: var(--oro);
+            font-size: 1.2rem;
+            margin-bottom: 40px;
+            display: block;
+        }
+
+        .story-content {
+            text-align: justify;
+            font-size: 1.1rem;
+            color: var(--nero);
+            font-weight: 300;
+        }
+
+        .story-content p { margin-bottom: 25px; }
+
+        .highlight {
+            color: var(--oro);
+            font-weight: 600;
+        }
+
+        .quote-box {
+            background-color: var(--crema);
+            padding: 40px;
+            margin: 50px 0;
+            border-left: 5px solid var(--oro);
+            font-style: italic;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            padding: 40px 5%;
+            background: var(--nero);
+            color: var(--bianco);
+            text-align: center;
+            margin-top: 80px;
+        }
+
+        .footer-info { font-size: 14px; }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="logo.jpg" alt="Arpel Moda Logo" class="logo-main">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="donna.html">Donna</a></li>
+            <li><a href="uomo.html">Uomo</a></li>
+            <li><a href="about.html" style="color: var(--oro);">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <div class="story-container">
+        <div class="story-header">
+            <h1>La nostra storia</h1>
+            <span class="subtitle">Dal 2002, una passione che attraversa l'Italia</span>
+        </div>
+
+        <div class="story-content">
+            <p>
+                Tutto ha inizio nel <span class="highlight">2002</span>. Immaginate una giovane donna, Fabiana Giacobbe, appena diplomata, con il cuore colmo di sogni e una determinazione incrollabile. Spinta da un amore profondo per la moda e gli accessori, Fabiana decide di trasformare la sua energia creativa in un progetto di vita.
+            </p>
+
+            <p>
+                Il destino unisce questa giovane ambizione all'esperienza di un'amica di famiglia, custode di anni di sapienza nel settore della pelletteria. Quest'amica portava con sé l'eredità di un negozio storico in Emilia Romagna, chiamato proprio <span class="highlight">Arpel Moda</span>. È da questo connubio tra la freschezza siciliana e l'esperienza emiliana che nasce il punto vendita di Nicosia.
+            </p>
+
+            <div class="quote-box">
+                "La nostra filosofia non è semplicemente vendere un oggetto, ma comprendere chi abbiamo di fronte. Ogni cliente che entra in Arpel Moda deve sentirsi accolto, compreso e, infine, profondamente soddisfatto."
+            </div>
+
+            <p>
+                In questi oltre vent'anni, Fabiana ha guidato l'attività con una <span class="highlight">passione costante</span>, evolvendo insieme al settore ma restando sempre fedele a un principio cardine: il rispetto per il cliente a 360 gradi. 
+            </p>
+
+            <p>
+                Immedesimarsi nelle necessità di chi cerca l'accessorio perfetto non è solo un lavoro, ma una missione quotidiana. Chi sceglie Arpel Moda sa di trovare non solo borse, foulard o zaini di qualità, ma un'attenzione umana che rende ogni acquisto un momento di gioia e gratificazione.
+            </p>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-info">
+            <p>Arpel Moda Srl di Fabiana Giacobbe</p>
+            <p>Via Fratelli Testa n. 66 - 94014 Nicosia (EN)</p>
+        </div>
+    </footer>
+
+</body>
+</html>
 
