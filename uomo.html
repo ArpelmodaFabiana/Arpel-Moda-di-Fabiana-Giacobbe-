@@ -1,1 +1,207 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collezione Uomo | Arpel Moda Srl</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --oro: #b89550;
+            --nero: #121212;
+            --bianco: #ffffff;
+            --grigio-fumo: #2c2c2c;
+            --crema: #faf9f6;
+        }
+
+        body {
+            font-family: 'Montserrat', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bianco);
+            color: var(--nero);
+        }
+
+        /* Navigazione */
+        nav {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px 5%;
+            background: var(--bianco);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .logo-main { height: 70px; width: auto; margin-bottom: 15px; }
+
+        .nav-links { list-style: none; display: flex; gap: 30px; margin: 0; padding: 0; }
+        .nav-links a {
+            text-decoration: none;
+            color: var(--nero);
+            font-size: 13px;
+            font-weight: 600;
+            text-transform: uppercase;
+        }
+
+        /* Header Sezione */
+        .page-header {
+            text-align: center;
+            padding: 60px 20px;
+            background-color: var(--crema);
+        }
+
+        .page-header h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            margin: 0;
+        }
+
+        /* Griglia Brand */
+        .brand-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+        }
+
+        .brand-card {
+            background: var(--bianco);
+            border: 1px solid #eee;
+            transition: transform 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .brand-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.05);
+        }
+
+        .brand-card img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+        }
+
+        .brand-content {
+            padding: 25px;
+            text-align: center;
+        }
+
+        .brand-content h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            margin-top: 0;
+            color: var(--oro);
+        }
+
+        .brand-content p {
+            font-size: 0.9rem;
+            color: #555;
+            height: 60px;
+            overflow: hidden;
+        }
+
+        .btn-link {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 12px 25px;
+            background-color: var(--nero);
+            color: var(--bianco);
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 600;
+            font-size: 0.8rem;
+            transition: background 0.3s;
+        }
+
+        .btn-link:hover {
+            background-color: var(--oro);
+        }
+
+        footer {
+            padding: 40px;
+            background: var(--nero);
+            color: var(--bianco);
+            text-align: center;
+            margin-top: 60px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="index.html">
+            <img src="logo.jpg" alt="Arpel Moda Logo" class="logo-main">
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="donna.html">Donna</a></li>
+            <li><a href="uomo.html" style="color: var(--oro);">Uomo</a></li>
+            <li><a href="about.html">Chi Siamo</a></li>
+            <li><a href="contatti.html">Contatti</a></li>
+        </ul>
+    </nav>
+
+    <header class="page-header">
+        <h1>Collezione Uomo</h1>
+        <p>Una selezione dei migliori brand internazionali per il business, il viaggio e il tempo libero.</p>
+    </header>
+
+    <div class="brand-section">
+        <div class="brand-grid">
+            
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1553062407-98eeb64c6a62?auto=format&fit=crop&w=800&q=80" alt="Piquadro">
+                <div class="brand-content">
+                    <h2>Piquadro</h2>
+                    <p>Zaini, cartelle professionali, portafogli e borselli dal design tecnologico e pelle di alta qualità.</p>
+                    <a href="https://www.piquadro.com/it/uomo.html" target="_blank" class="btn-link">Vedi Collezione</a>
+                </div>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1622560480605-d83c853bc5c3?auto=format&fit=crop&w=800&q=80" alt="Cabin Zero">
+                <div class="brand-content">
+                    <h2>Cabin Zero</h2>
+                    <p>Zaini da viaggio leggeri e resistenti, progettati per le cabine degli aerei e l'avventura.</p>
+                    <a href="https://www.cabinzero.com/" target="_blank" class="btn-link">Scopri Zaini Viaggio</a>
+                </div>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1614164185128-e4ec99c436d7?auto=format&fit=crop&w=800&q=80" alt="Calvin Klein">
+                <div class="brand-content">
+                    <h2>Calvin Klein</h2>
+                    <p>Cinture, sciarpe, beauty case e portafogli dallo stile iconico, minimalista e contemporaneo.</p>
+                    <a href="https://www.calvinklein.it/accessori-uomo" target="_blank" class="btn-link">Esplora Accessori</a>
+                </div>
+            </div>
+
+            <div class="brand-card">
+                <img src="https://images.unsplash.com/photo-1627123424574-724758594e93?auto=format&fit=crop&w=800&q=80" alt="Secrid">
+                <div class="brand-content">
+                    <h2>Secrid</h2>
+                    <p>Gli originali portacarte e portafogli compatti con protezione RFID, sicuri ed eleganti.</p>
+                    <a href="https://secrid.com/it-it/" target="_blank" class="btn-link">Guarda i Modelli</a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 Arpel Moda Srl - Via Fratelli Testa 66, Nicosia</p>
+    </footer>
+
+</body>
+</html>
 
