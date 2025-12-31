@@ -66,12 +66,11 @@
             transition: color 0.3s;
             letter-spacing: 1.5px;
         }
-
         .nav-links a:hover { color: var(--bordeaux); }
 
         /* Hero Section */
         .hero {
-            height: 60vh;
+            height: 65vh;
             background: linear-gradient(var(--overlay-leggero), var(--overlay-leggero)), 
                         url('vetrina.jpg');
             background-size: cover;
@@ -87,12 +86,12 @@
 
         .hero h1 { 
             font-family: 'Playfair Display', serif;
-            font-size: 4rem; 
+            font-size: 4.5rem; 
             margin-bottom: 15px; 
             text-shadow: 2px 2px 8px rgba(0,0,0,0.7); 
         }
 
-        /* Sezione Social Feed */
+        /* Sezione Social Feed Facebook (Centrata) */
         .social-section {
             padding: 60px 5%;
             background-color: #f9f9f9;
@@ -106,11 +105,9 @@
             margin-bottom: 10px;
         }
 
-        .social-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr; /* Due colonne: FB e IG */
-            gap: 30px;
-            margin-top: 40px;
+        .fb-container {
+            max-width: 900px; /* Centra il feed di Facebook */
+            margin: 40px auto 0 auto;
         }
 
         /* Griglia Prodotti */
@@ -124,7 +121,7 @@
         .card {
             position: relative;
             overflow: hidden;
-            height: 500px;
+            height: 550px;
             cursor: pointer;
             box-shadow: 0 10px 25px rgba(0,0,0,0.08);
         }
@@ -152,9 +149,11 @@
             border-top: 5px solid var(--bordeaux);
         }
 
-        @media (max-width: 992px) {
-            .social-container { grid-template-columns: 1fr; } /* Sul cellulare uno sotto l'altro */
-            .hero h1 { font-size: 2.5rem; }
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 3rem; }
+            .nav-links { gap: 15px; flex-wrap: wrap; }
+            .logo-main { height: 110px; }
+            .grid-container { grid-template-columns: 1fr; }
         }
     </style>
 </head>
@@ -174,23 +173,15 @@
 
     <header class="hero">
         <h1>Arpel Moda</h1>
-        <p>L'eleganza quotidiana raccontata attraverso i nostri canali social.</p>
+        <p>Pelletteria di alta qualità a Nicosia. Uno stile senza tempo direttamente dai nostri canali social.</p>
     </header>
 
     <section class="social-section">
         <h2>Novità in Vetrina</h2>
-        <p>Segui i nostri aggiornamenti in tempo reale su Facebook e Instagram</p>
+        <p>Scopri gli ultimi arrivi dalla nostra pagina Facebook</p>
         
-        <div class="social-container">
-            <div>
-                <h3 style="font-family: 'Playfair Display';">Facebook</h3>
-                <div class="elfsight-app-8ad5de8a-743c-49db-882a-dfc61a911b1a" data-elfsight-app-lazy></div>
-            </div>
-
-            <div>
-                <h3 style="font-family: 'Playfair Display';">Instagram</h3>
-                <div class="elfsight-app-22e50613-bad1-4761-9d36-e2358ebeef58" data-elfsight-app-lazy></div>
-            </div>
+        <div class="fb-container">
+            <div class="elfsight-app-8ad5de8a-743c-49db-882a-dfc61a911b1a" data-elfsight-app-lazy></div>
         </div>
     </section>
 
@@ -218,3 +209,4 @@
 
 </body>
 </html>
+
